@@ -50,24 +50,29 @@ Example:
 | or R | 0x50–0x5B | 1 | AR ← AR OR R |
 | cmp R | 0x60-0x6B | 1 | Compare AR and R (updates flags only) |
 
-### Immediate mode
+### Immediate Instructions
 
 | Assembly Instruction | Opcode | Words | Action |
 |----------|-------------|-------|--------|
 | addi xx | 0x01 | 2 | AR ← AR + xx |
-| subi xx | 0x02 | 2 | AR ← AR - xx |
+| sbi xx | 0x02 | 2 | AR ← AR - xx |
 | xri xx | 0x03 | 2 | AR ← AR XOR xx |
 | ani xx | 0x04 | 2 | AR ← AR AND xx |
 | ori xx | 0x05 | 2 | AR ← AR OR xx |
 | cmi xx | 0x06 | 2 | Compare AR and xx (updates flags only) |
 
-### Data Movement
+### Data Movement Instructions
 
 | Assembly Instruction | Opcode Range | Words | Action |
 |----------|-------------|-------|--------|
 | movs R | 0x70–0x7B | 1 | AR ← R (move register to accumulator) |
 | movd R | 0x80–0x8B | 1 | R ← AR (move accumulator to register) |
 | movi R xx | 0x90–0x9B | 2 | R ← xx (load immediate into register) |
+
+### Memory Instructions
+
+| Assembly Instruction | Opcode Range | Words | Action |
+|----------|-------------|-------|--------|
 | stor R | 0xA0–0xAB | 1 | Mem[AR] ← R (store register to memory) |
 | load R | 0xB0–0xBB | 1 | R ← Mem[AR] (load from memory to register) |
 
