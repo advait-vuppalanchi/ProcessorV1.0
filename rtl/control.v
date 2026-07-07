@@ -178,6 +178,7 @@ module control(
             STOR4: next_state = FETCH1;
             LOAD4: next_state = FETCH1;
             STOP3: next_state = STOP3;
+            NOP:   next_state = FETCH1;
         endcase
     end
 endmodule

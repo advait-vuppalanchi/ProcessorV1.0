@@ -32,3 +32,10 @@ or:
 
 wave_or:
 	gtkwave sim/or_reg.vcd
+
+control:
+	iverilog -Irtl -o sim/control_sim rtl/control.v tb/control_tb.v
+	vvp sim/control_sim
+
+wave_control:
+	gtkwave sim/control.vcd
