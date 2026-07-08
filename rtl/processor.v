@@ -31,5 +31,5 @@ module processor(input clk, input rst);
                         .Lpc(Lpc), .Lir(Lir), .Eor(Eor), .Ror(Ror), 
                         .Lor(Lor), .Ear(Ear), .Rar(Rar), .Lar(Lar), 
                         .Erg(Erg), .Lrg(Lrg), .Salu(Salu), .Srg(Srg), 
-                        .halt(halt));
+                        .halt(halt), .bus(bus));
 endmodule

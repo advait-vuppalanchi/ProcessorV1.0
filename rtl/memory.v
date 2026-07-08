@@ -6,12 +6,20 @@ module memory(
     inout [7:0] bus
 );
 
-reg [7:0] mem [0:255];
+    reg [7:0] mem [0:255];
 
-initial $readmemh("programs/test.hex", mem); //filling the memory with instructions
+    //filling the memory with instructions
+    string hexfile;
+    initial begin
+        if (!$value$plusargs("hexfile=%s", hexfile))
+            hexfile = "programs/test1.hex";
 
-assign bus = rd? mem[addr] : 8'bz;
+        $readmemh(hexfile, mem);
+    end
+    
+    assign bus = rd? mem[MARaddr] : 8'bz;
 
-always @(negedge clk) begin
-    if(wr) mem[addr] <= bus;
-end
+    always @(negedge clk) begin
+        if(wr) mem[MARaddr] <= bus;
+    end
+endmodule

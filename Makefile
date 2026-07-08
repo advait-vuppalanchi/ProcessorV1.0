@@ -39,3 +39,18 @@ control:
 
 wave_control:
 	gtkwave sim/control.vcd
+
+proc:
+	iverilog -g2012 -Irtl -o sim/proc_sim rtl/*.v tb/proc_tb.v
+
+test1: proc
+	vvp sim/proc_sim +hexfile=programs/test1.hex
+
+test2:
+	vvp sim/proc_sim +hexfile=programs/test2.hex
+
+test3:
+	vvp sim/proc_sim +hexfile=programs/test3.hex +test3
+
+wave:
+	gtkwave sim/processor.vcd

@@ -2,7 +2,7 @@
 
 module control(
     input clk, rst,
-    input [7:0] IR,
+    input [7:0] IR, bus,
     output reg RD,WR,Lmr,Epc,Ipc,Lpc,Lir,
     output reg Eor,Ror,Lor,Ear,Rar,Lar,Erg,Lrg,
     output reg [2:0] Salu,
@@ -104,7 +104,7 @@ module control(
         case(state)
             FETCH1: next_state = FETCH2;
             FETCH2: begin
-                case (IR)
+                case (bus)
                     8'h00:       next_state = NOP;
                     8'h07:       next_state = STOP3;
                     8'h01:       next_state = IMM3;
@@ -113,7 +113,7 @@ module control(
                     8'h04:       next_state = IMM3;
                     8'h05:       next_state = IMM3;
                     8'h06:       next_state = IMM3;
-                    default: case (IR[7:4])
+                    default: case (bus[7:4])
                         4'h1:    next_state = ALU3;
                         4'h2:    next_state = ALU3;
                         4'h3:    next_state = ALU3;
