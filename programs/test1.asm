@@ -1,2 +1,2 @@
-movi R9, 43
+movi R9, 67
 stop

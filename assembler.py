@@ -47,7 +47,10 @@ def parse_register(token):
 def parse_immediate(token):
     token = token.upper()
 
-    value = int(token, 16)
+    if token.startswith("0X"):
+        value = int(token, 16)
+    else:
+        value = int(token)
 
     if value < 0 or value > 0xFF:
         raise ValueError(f"Immediate out of range: {token}")

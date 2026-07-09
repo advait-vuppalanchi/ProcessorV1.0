@@ -1,10 +1,10 @@
-movi R10, F0
-movi R11, F1
+movi R10, 240
+movi R11, 241
 
-movi R0, 12
-movi R1, 34
-movi R2, 56
-movi R3, AA
+movi R0, 18
+movi R1, 52
+movi R2, 86
+movi R3, 170
 
 movs R10
 stor R0
@@ -12,8 +12,8 @@ stor R0
 movs R11
 stor R1
 
-movi R0, 00
-movi R1, 00
+movi R0, 0
+movi R1, 0
 
 movs R10
 load R4
@@ -26,19 +26,19 @@ add R5
 movd R6
 
 movs R6
-adi 10
+adi 16
 movd R7
 
 movs R7
-xri FF
+xri 0xFF
 movd R8
 
 movs R8
-ani F0
+ani 0xF0
 movd R9
 
 movs R9
-ori 0A
+ori 10
 movd R0
 
 movs R0
@@ -58,11 +58,11 @@ or R6
 movd R4
 
 movs R4
-sbi 20
+sbi 32
 movd R5
 
 movs R5
-adi 01
+adi 1
 movd R6
 
 stop

@@ -36,10 +36,10 @@ module processor_tb;
         input [3:0] regnum;
         input [7:0] expected;
         begin
-            if (my_proc.my_regs.regs[regnum] == expected)
-                $display("PASS: R%0d = %h", regnum, expected);
+            if (my_proc.my_regs.regs[regnum] === expected)
+                $display("PASS: R%0d = %d", regnum, expected);
             else
-                $display("FAIL: R%0d Expected=%h Got=%h",
+                $display("FAIL: R%0d Expected=%d Got=%d",
                          regnum,
                          expected,
                          my_proc.my_regs.regs[regnum]);
@@ -52,7 +52,18 @@ module processor_tb;
 
         if(test1) begin
             $display("\n----- TEST RESULTS -----");
+            check_reg(4'd0 , 8'hxx);
+            check_reg(4'd1 , 8'hxx);
+            check_reg(4'd2 , 8'hxx);
+            check_reg(4'd3 , 8'hxx);
+            check_reg(4'd4 , 8'hxx);
+            check_reg(4'd5 , 8'hxx);
+            check_reg(4'd6 , 8'hxx);
+            check_reg(4'd7 , 8'hxx);
+            check_reg(4'd8 , 8'hxx);
             check_reg(4'd9 , 8'd67);
+            check_reg(4'd10, 8'hxx);
+            check_reg(4'd11, 8'hxx);
         end
 
         if(test2) begin
