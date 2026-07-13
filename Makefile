@@ -65,3 +65,9 @@ test5:
 
 wave:
 	gtkwave sim/processor.vcd
+
+wave_add:
+	gtkwave sim/processor.vcd sim/ADDinstruction.gtkw
+
+wave_stor:
+	gtkwave sim/processor.vcd sim/STORinstruction.gtkw

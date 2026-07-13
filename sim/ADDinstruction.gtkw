@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Jul 13 12:07:06 2026
+[*]
+[dumpfile] "C:\Users\Advait\Desktop\VerilogProcessorV1\sim\sim\processor.vcd"
+[savefile] "C:\Users\Advait\Desktop\VerilogProcessorV1\sim\Test3.gtkw"
+[timestart] 559910
+[size] 1280 777
+[pos] -1 -1
+*-13.000000 559310 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] processor_tb.
+[treeopen] processor_tb.my_proc.
+[sst_width] 42
+[signals_width] 126
+[sst_expanded] 0
+[sst_vpaned_height] 215
+@28
+processor_tb.my_proc.clk
+@24
+processor_tb.my_proc.my_control.state[5:0]
+@22
+processor_tb.my_proc.ir_out[7:0]
+@24
+processor_tb.my_proc.bus[7:0]
+@28
+processor_tb.my_proc.Erg
+processor_tb.my_proc.Lor
+@24
+processor_tb.my_proc.Srg[3:0]
+@28
+processor_tb.my_proc.Ear
+processor_tb.my_proc.Lar
+processor_tb.my_proc.Salu[2:0]
+@24
+processor_tb.my_proc.alu_out[7:0]
+processor_tb.my_proc.mar_out[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
