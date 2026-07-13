@@ -1,4 +1,4 @@
-# DSM Processor
+# Processor v1.0
 ![Verilog](https://img.shields.io/badge/HDL-Verilog-blue)
 ![Simulator](https://img.shields.io/badge/Simulator-Icarus%20Verilog-orange)
 ![Waveforms](https://img.shields.io/badge/Waveforms-GTKWave-green)
@@ -55,7 +55,7 @@ Microinstruction Control Table → [docs/control_table.md](docs/control_table.md
 ## Project Structure
 
 ```
-dsm-processor/
+processorV1.0/
 ├── README.md
 ├── rtl/
 │   ├── alu.v
@@ -75,20 +75,6 @@ dsm-processor/
 │   ├── regs_tb.v
 │   └── proc_tb.v
 ├── sim/
-│   ├── alu_sim
-│   ├── alu.vcd
-│   ├── ar_sim
-│   ├── ar_reg.vcd
-│   ├── or_sim
-│   ├── or_reg.vcd
-│   ├── pc_sim
-│   ├── pc_reg.vcd
-│   ├── regs_sim
-│   ├── regs.vcd
-│   ├── control_sim
-│   ├── control.vcd
-│   ├── proc_sim
-│   ├── processor.vcd
 │   ├── ADDinstruction.gtkw
 │   ├── STORinstruction.gtkw
 │   └── .gitkeep
@@ -99,7 +85,7 @@ dsm-processor/
 │   ├── test4.asm / test4.hex
 │   └── test5.asm / test5.hex
 ├── docs/
-│   ├── architecture.png
+│   ├── Architecture.png
 │   ├── ISA.md
 │   ├── control_table.md
 │   └── waveforms/
