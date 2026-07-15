@@ -216,7 +216,7 @@ register data driven onto the bus, and memory write enable assertion.
 **Hardwired Control Unit:**
 The book's Chapter 7 describes ROM-based microprogrammed control.
 This implementation uses a hardwired FSM — simpler to build and
-debug for a 12-instruction set. Each FSM state corresponds
+debug for a 19-instruction set. Each FSM state corresponds
 directly to a row in [docs/control_table.md](docs/control_table.md).
 V2.0 will migrate to a microprogrammed sequencer as the instruction set grows.
 
@@ -252,4 +252,4 @@ The original processor design assumes machine code is provided directly. To stre
 
 ## Reference
 
-P.J. Narayanan, *Design of a Simple Processor*, IIIT Hyderabad.
+*Design of a Simple Processor*, by P.J. Narayanan, IIIT Hyderabad.
